@@ -19,6 +19,8 @@ const db = mysql.createConnection({
 app.use(cors());
 app.use(express.json());
 
+res.setHeader("Access-Control-Allow-Credentials","true");
+              
 //API Registration
 app.post("/api/registration", async (req, res) => {
 
